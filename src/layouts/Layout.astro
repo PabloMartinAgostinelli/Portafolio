@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import { Image } from 'astro:assets';
+import logoImage from '../assets/logo.png';
 ---
 
 <!doctype html>
@@ -15,6 +17,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href={logoImage.src} />
   </head>
   <body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen font-['Inter']">
     <div class="absolute inset-0 bg-[url('https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg')] opacity-5 bg-cover bg-center fixed"></div>
